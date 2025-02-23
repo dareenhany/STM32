@@ -1,0 +1,11 @@
+int main(void)
+{
+    RCC->AHB1LPENR |= (1 << 0);
+
+    GPIOA -> MODER |=  (1  << (2 * 5));
+
+    while(1)
+    {
+        GPIOA -> ODR |= (1 << 5);
+    }
+}
